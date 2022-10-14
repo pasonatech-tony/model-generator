@@ -1,0 +1,28 @@
+id: Pasona
+name: Sample Plug-in
+version: 1.0.0
+extensions:
+  - id: model-generator
+    type: widget
+    name: sample plugin
+    schema:
+      groups:
+        - id: default
+          fields:
+            - id: modelUrl
+              type: url
+              title: Model
+              ui: image
+              availableIf:
+                field: style
+                type: string
+                value: image
+            - id: modelSize
+              type: number
+              title: Size
+              defaultValue: 1
+              min: 0
+              availableIf:
+                field: style
+                type: string
+                value: image
